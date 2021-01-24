@@ -128,17 +128,17 @@ body {
   border: none;
   background-color: transparent;
   color: #000000;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-menu-btn:hover .icon-close,
-.mobile-menu-btn:focus .icon-close,
-.mobile-menu-btn:hover .icon-menu,
-.mobile-menu-btn:focus .icon-menu {
-  color: var(--accent-text-color);
+.mobile-menu-btn:hover .icon-menu-close,
+.mobile-menu-btn:focus .icon-menu-close,
+.mobile-menu-btn:hover .icon-menu-menu,
+.mobile-menu-btn:focus .icon-menu-menu {
+  fill: var(--accent-color);
 }
 
-.mobile-menu-btn .icon-close {
+.mobile-menu-btn .icon-menu-close {
   display: none;
 }
 
@@ -245,8 +245,12 @@ body {
   }
 }
 
-.mail:hover, .mail:focus, .tel:hover, .tel:focus {
+.mail:hover .mail:focus, .tel:hover .mail:focus, .mail:hover .tel:focus, .tel:hover .tel:focus {
   color: var(--accent-color);
+}
+
+.mail:hover .mail:focus .header-icon, .tel:hover .mail:focus .header-icon, .mail:hover .tel:focus .header-icon, .tel:hover .tel:focus .header-icon {
+  fill: var(--accent-color);
 }
 
 .header-icon {

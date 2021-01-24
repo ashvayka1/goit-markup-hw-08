@@ -61,15 +61,16 @@
   background-color: transparent;
   color: #000000;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover .icon-close,
-  &:focus .icon-close,
-  &:hover .icon-menu,
-  &:focus .icon-menu {
-    color: var(--accent-text-color);
+  &:hover .icon-menu-close,
+  &:focus .icon-menu-close,
+  &:hover .icon-menu-menu,
+  &:focus .icon-menu-menu {
+    fill: var(--accent-color);
   }
-  .icon-close {
+
+  .icon-menu-close {
     display: none;
   }
 
@@ -163,13 +164,8 @@
       color: var(--accent-color);
     }
   }
-.tel{
-  // margin-bottom: 16px;
 
-  // @media screen and(min-width:768px){
-  //   margin-bottom: 10px;
-  // }
-}
+
 
 
   .mail,.tel{
@@ -190,9 +186,15 @@
     font-size: 14px;
 line-height: 1.14;
   }
-  &:hover,
+
+  &:hover 
   &:focus {
+    
     color: var(--accent-color);
+
+    & .header-icon{
+      fill: var(--accent-color);
+    }
   }
   }
 
@@ -219,7 +221,7 @@ line-height: 1.14;
     }
   }
 
-  .mail:hover,
+.mail:hover,
 .mail:focus,
 .tel:hover,
 .tel:focus {
